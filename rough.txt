@@ -1,0 +1,28 @@
+ <div class="Registerd " id="reg">
+            <h1>
+                <p>Register</p>
+                Registered succesfully by <%= locals.user.UserID %>
+                    <!-- getting value from the server from login page to submitted page -->
+            </h1>
+        </div>
+
+
+
+
+
+
+
+Resister Post
+
+app.post('/register', (req, res) => {
+    // console.log("this is register",req.body);
+
+    let user = {
+        UserID: req.body.UserID,
+        token: 101
+    }
+    console.log(user);
+    res.render("submitted", { user})
+
+
+})
